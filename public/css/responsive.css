@@ -181,6 +181,10 @@ footer img {
    color: #f1f1f1;
 }
 
+.footer-col a:hover {
+   color:#a8a8a8;
+}
+
 .copyright {
    text-align: center;
    font-size: 10px;
