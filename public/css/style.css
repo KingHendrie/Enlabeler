@@ -181,3 +181,33 @@ footer img {
 .col-half .izwe {
    width: 128px;
 }
+
+.clear-row {
+	padding: 1em 0;
+}
+
+.clear-row a {
+	width: max-content;
+	margin: 2em auto;
+}
+
+.ctagreen {
+	background: #652d90;
+	border: 3px solid #652d90;
+}
+
+.cta {
+	padding: 12px 20px;
+	display: block;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: center;
+	border-radius: 8px;
+	min-width: 107px;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
