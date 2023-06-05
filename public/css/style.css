@@ -183,6 +183,10 @@ footer img {
 .col-half .izwe {
    width: 128px;
 }
+.col-half ul {
+   list-style: none;
+   padding-left: 0px;
+}
 
 .clear-row {
 	padding: 1em 0;
@@ -212,4 +216,69 @@ footer img {
 	color: #fff;
 	text-decoration: none;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.perks {
+   display: flex;
+   justify-content: space-between;
+   width: 50%;
+   margin: auto;
+   margin-bottom: 0px;
+}
+
+.perk-stats {
+   display: flex;
+   align-items: center;
+}
+
+.perk-stats img {
+   width: 30px;
+}
+
+.perk-stats p {
+   margin-left: 10px;
+   color: #652d90;
+}
+
+.blue-line {
+   display: block;
+   margin: auto;
+   width: 400px;
+   height: 4px;
+   background: #0f294a;
+   margin-bottom: 2em;
+}
+
+.pricing {
+   justify-content: center;
+   margin-top: 2em;
+   margin-left: 2em;
+}
+
+.roadmap {
+   justify-content: center;
+   display: grid;
+   margin-bottom: 2em;
+}
+
+.data-security {
+   color: #f1f1f1;
+}
+
+.data-security p {
+   color: #f1f1f1;
+}
+
+.data-security a {
+   color: #f1f1f1;
+   text-decoration: none;
+   border: 1px solid #f1f1f1;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 5px;
+}
+
+.bg-purple {
+   background-color: #652D90;
+   padding: 10px;
 }
