@@ -80,11 +80,17 @@ footer img {
 }
 
 .hero-features {
+   position: relative;
    display: flex;
    justify-content: space-between;
    margin-top: 3em;
-   color: #0f294a;
+   color: #f1f1f1;
    z-index: 0;
+}
+
+.hero-features p, svg {
+   color: #f1f1f1;
+   fill: #f1f1f1;
 }
 
 .container h1 {
@@ -122,10 +128,6 @@ footer img {
    width: 35px;
    height: 35px;
    margin: 5px;
-}
-
-.features-tag path {
-   fill: #0f294a;
 }
 
 #platform h2, p {
