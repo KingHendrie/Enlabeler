@@ -97,6 +97,7 @@
    max-width: 900px;
    margin: 0 auto;
    padding: 30px;
+   padding-top: 0px;
    text-align: center;
 }
 
@@ -160,6 +161,17 @@
 
 .social-icons a {
    margin: 5px;
+}
+
+
+.foott {
+   justify-content: right;
+   display: grid;
+}
+
+.foott a {
+   color: #f1f1f1;
+   text-decoration: none !important;
 }
 
 @media (min-width: 550px) {
