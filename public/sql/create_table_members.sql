@@ -1,0 +1,1 @@
+CREATE TABLE `enlabeler`.`members` (`member_id` VARCHAR(10) NOT NULL , `name` VARCHAR(100) NOT NULL , `last_name` VARCHAR(100) NOT NULL , `email` VARCHAR(100) NOT NULL , `password` VARCHAR(16) NOT NULL , `user_group` INT(1) NOT NULL , PRIMARY KEY (`member_id`))

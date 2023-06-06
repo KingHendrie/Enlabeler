@@ -2,7 +2,7 @@
 session_start();
 require_once 'db_connection.php';
 
-if ($_SERVER["REQUETS_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = trim($_POST["email"]);
 	$password = trim($_POST["password"]);
 

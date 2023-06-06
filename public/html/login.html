@@ -16,7 +16,8 @@
 		<link rel="stylesheet" href="../css/head_footer.css">
 		<!-- load scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="../js/load.js"/></script>
+		<script src="../js/load.js"></script>
+		<script src="../js/password.js"></script>
 	</head>
 
 	<body>
@@ -34,10 +35,16 @@
 					<div class="card">
 						<h1>Login</h1>
 						<div class="login-details">
+
 							<label for="email">Email:</label>
-							<input type="text" id="email" name="email">
+							<input class="clear" type="email" id="email" name="email" required>
+
 							<label for="password">Password:</label>
-							<input type="password" id="password" name="password">
+							<div class="show-hide">
+								<input class="password clear" type="password" id="password" name="password" required>
+								<button class="password-input"> Show Password</button>
+							</div>
+
 							<input type="submit" value="Login">
 						</div>
 						<p><a href="../html/register.html">Don't have an account?</a></p>
