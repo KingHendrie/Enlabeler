@@ -37,6 +37,50 @@ header .logo img {
    display: block;
 }
 
+label {
+	display:block;
+	margin-bottom:10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea, select {
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	width:100%;
+	box-sizing:border-box;
+	margin-bottom:20px;
+}
+
+button[type="submit"] {
+	background-color:#652D90;
+	color:white;
+	padding:12px 20px;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+}
+
+button[type="submit"]:hover {
+	background-color:#0F294A;
+}
+
+input[type="submit"] {
+	background-color:#652D90;
+	color:white;
+	padding:12px 20px;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+}
+
+input[type="submit"]:hover {
+	background-color:#0F294A;
+}
+
 footer {
    background: linear-gradient(90.28deg, #0F294A 0%, #652D90 100%);
    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -77,6 +121,15 @@ footer img {
    z-index: 0;
    background: linear-gradient(315deg, #652d90 0%, #0f294a 100%);
    opacity: 0.5;
+}
+
+#login {
+   width: 100%;
+   margin: 20px;
+   align-items: center;
+   justify-content: center;
+   min-height: 50vh;
+   position: relative;
 }
 
 .hero-features {
@@ -510,4 +563,17 @@ footer img {
 .social-feed img {
    height: 50px;
    display: block;
+}
+
+.card {
+   background-color: linear-gradient(90.28deg, #0F294A 0%, #652D90 100%);
+   max-width: 400px;
+   margin: auto;
+   padding: 20px;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+   text-align: center;
+}
+
+.card h1 {
+   color: #0f294a;
 }
