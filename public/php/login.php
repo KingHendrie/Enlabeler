@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$result = mysqli_query($conn, $query);
 
 		if(mysqli_num_rows($result) == 1) {
+			$_SESSION['logged_in'] = true;
 			header('Location: ../html/dashboard.html');
 			exit();
 		}
