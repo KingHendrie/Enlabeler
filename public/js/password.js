@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	$(".clear").val("");
-
 	$(".password-input").click(function() {
 		var $this=$(".password");
 		if ($($this).attr("type") === "password") {

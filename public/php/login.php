@@ -10,16 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo '<script>alert("Please enter your email and password.");window.loaction.href="../html/login.html";</script>';
 	}
 	else {
-		$query = "SELECT * FROM member WHERE email='$email' and password='$password'";
+		$query = "SELECT * FROM members WHERE email='$email' and password='$password'";
 		$result = mysqli_query($conn, $query);
 
 		if(mysqli_num_rows($result) == 1) {
-			header('Location: ../html/register.html');
+			header('Location: ../html/dashboard.html');
 			exit();
 		}
 		else {
-			echo '<script>alert("Invalid member ID or password.");</script>';
-			echo '<p>Invalid email or password. <a href="../html/password_reset.html">Reset your password</a> or <a href="../html/login.html">try again</a>.</p>';
+			echo '<script>alert("Invalid email or password.");</script>';
 		}
 	}
 }

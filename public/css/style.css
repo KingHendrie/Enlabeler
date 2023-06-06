@@ -595,3 +595,7 @@ footer img {
 .show-hide button:hover {
    background-color:#0F294A;
 }
+
+.hidden {
+   display:none;
+}

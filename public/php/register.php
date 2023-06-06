@@ -1,5 +1,8 @@
 <?php
 require_once 'db_connection.php';
+require '../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$first_name = trim($_POST["first_name"]);
@@ -20,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		$errors[] = "Please enter a valid email address.";
 	}
-	if (empty($password)) {
+	if (empty($password) || strlen($password) > 16 || strlen($password) < 6) {
 		$errors[] = "Please enter your password.";
 	}
 	if (empty($confirm_password) || $confirm_password != $password) {
@@ -42,6 +45,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$result = mysqli_query($conn, $query);
 
 		if ($result) {
+
+			$mail = new PHPMailer(true);
+
+			$mail->isSMTP();
+			$mail->SMTPAuth = true;
+
+			$mail->Host = 'smtp.gmail.com';
+			$mail->SMTPOptions = array(
+				'ssl' => array(
+					'verify_peer' => false,
+					'verify_peer_name' => false,
+					'allow_self_signed' => true
+				)
+			);
+			$mail->SMTPSecure = 'ssl';
+			$mail->Port = 465;
+
+			$mail->Username = 'info.enlabeler@gmail.com';
+			$mail->Password = 'tbomhbilcirufezx';
+
+			$mail->SetFrom($email, 'Enlabeler Info');
+			$mail->addAddress($email, $first_name);
+
+			$mail->Subject = 'Registration Complete';
+			$mail->Body = "Thank you for registering with Enlabeler, $first_name.";
+
+			$mail->send();
+
 			header('Location: ../html/dashboard.html');
 			exit();
 		}
