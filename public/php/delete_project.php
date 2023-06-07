@@ -16,4 +16,5 @@
 			echo '<script>alert("'.$error_msg.'");window.location.href="../html/view_project.html";</script>';
 		}
    }
+	mysqli_close($conn);
 ?>

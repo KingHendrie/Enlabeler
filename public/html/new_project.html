@@ -18,6 +18,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../js/check_login.js"></script>
 		<script src="../js/load_dash.js"/></script>
+		<script src="../js/get_services.js"></script>
+		<script src="../js/get_billing.js"></script>
 	</head>
 
 	<body>
@@ -37,6 +39,23 @@
 						<h1>Project</h1>
 						<div class="login-details">
 
+							<label for="project_name">Project Name:</label>
+							<input class="clear" type="text" id="project_name" name="project_name" required>
+
+							<label for="budget">Budget:</label>
+							<input id="inputbudget" class="clear" type="number" step="500" id="budget" name="budget" value="500" required>
+
+							<label for="serviceDropdown">Service:</label>
+							<select name="serviceDropdown" id="serviceDropdown" class="service-type"></select>
+
+							<label for="billingDropdown">Billing Currency:</label>
+							<select name="billingDropdown" id="billingDropdown" class="billing-currency"></select>
+
+							<label for="units">Estimated Units:</label>
+							<input class="clear" type="number" step="500" id="units" name="units" value="500" required>
+							<br>
+							<br>
+							<input type="submit" value="Submit">
 						</div>
 					</div>
 				</form>

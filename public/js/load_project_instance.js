@@ -5,7 +5,7 @@ $(document).ready(function() {
 		dataType: "json",
 		success: function(response) {
 			var html = '';
-			
+
 			response.forEach(function(row) {
 				html +=
 					`<div class="projects">
@@ -13,8 +13,6 @@ $(document).ready(function() {
 						<div style="text-align:center" class="projects-block-inner">
 							<p>${row.service}</p>
 							<p>Budget: ${row.billing_cur}${row.budget}</p>
-							<p>Cost: ${row.pro_cost}</p>
-							<p>Budget Remaining: ${row.billing_cur}${budget_remaining}</p>
 							<form name="${row.pro_id}" id="formToSubmit" method="post">
 								<button id="triggerFormSubmit" type="submit">
 									<i class="fa-solid fa-pen-to-square"></i>
