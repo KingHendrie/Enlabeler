@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$member_id = strtolower(substr($first_name,0,3).''.substr($last_name,0,3)).''.rand(1000,9999);
 
 			$query = "INSERT INTO members (member_id, name, last_name, email, user_group)
-							VALUES ('$member_id', '$first_name', '$last_name', '$email', 1)";
+							VALUES ('$member_id', '$first_name', '$last_name', '$email', 2)";
 			$result = mysqli_query($conn, $query);
 
 			if ($result) {

@@ -19,6 +19,9 @@
 		<script src="../js/check_admin.js"></script>
 		<script src="../js/check_login.js"></script>
 		<script src="../js/load_dash.js"/></script>
+		<script src="../js/cool_table.js"></script>
+		<script src="../js/load_admin.js"></script>
+		<script src="../js/delete_admin.js"></script>
 		<script src="https://kit.fontawesome.com/d4b297eac7.js" crossorigin="anonymous"></script>
 	</head>
 
@@ -31,26 +34,26 @@
 		</header>
 
 		<!-- admin section -->
-		<section class="projects-block">
-			<div class="projects">
-				<div class="projects-block-title"> View Admins </div>
-				<div class="projects-block-inner">
-					<a href="../html/view_admins.html">
-						<div class="add-project">
-							<i class="fa-solid fa-user"></i>
-						</div>
-					</a>
-				</div>
+		<section class="cool-table">
+			<h1>Admins</h1>
+			<div class="tbl-header">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+							<th><i class="fa-solid fa-trash"></i></th>
+						</tr>
+					</thead>
+				</table>
 			</div>
-			<div class="projects">
-				<div class="projects-block-title"> Add Admin </div>
-				<div class="projects-block-inner">
-					<a href="../html/add_admin.html">
-						<div class="add-project">
-							<i class="fa-solid fa-plus"></i>
-						</div>
-					</a>
-				</div>
+			<div class="tbl-content">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tbody id="load_admin">
+
+					</tbody>
+				</table>
 			</div>
 		</section>
 
