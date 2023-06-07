@@ -1,7 +1,9 @@
 <html>
 	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="../js/navbar.js"/></script>
 		<script src="../js/submit_form.js"/></script>
+		<script src="../js/is_admin.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -12,6 +14,8 @@
 				<div class="close-nav"><button>x</button></div>
 				<nav>
 					<ul>
+						<div id="admin"></div>
+						<li><a href="../html/new_project.html">New Project</a></li>
 						<form id="formToSubmit" action="../php/sing_out.php" method="post">
 							<li><a id="triggerFormSubmit">sing out</a></li>
 						</form>

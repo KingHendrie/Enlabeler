@@ -341,7 +341,8 @@ footer img {
 }
 
 .pricing-block,
-.values-block {
+.values-block,
+.projects-block {
    margin-top: 4em;
    display: flex;
    justify-content: space-between;
@@ -358,8 +359,17 @@ footer img {
    margin-bottom: 2em;
 }
 
+.projects {
+   width: calc(25% - 2em);
+   box-shadow: 0px 3px 5px 3px rgb(0 0 0 / 20%);
+   border-radius: 15px;
+   overflow: hidden;
+   margin-bottom: 2em;
+}
+
 .price-block-title,
-.values-block-title {
+.values-block-title,
+.projects-block-title {
    background: #652d90;
    padding: 1em;
    text-align: center;
@@ -369,10 +379,16 @@ footer img {
 }
 
 .price-block-inner,
-.values-block-inner {
+.values-block-inner,
+.projects-block-inner {
    background: #f1f1f1;
    border-radius: 15px;
    padding: 1em;
+}
+
+.projects-block-inner a {
+   text-decoration: none;
+   color:rgba(0, 0, 0,)
 }
 
 .price-block-inner ul {
@@ -567,9 +583,10 @@ footer img {
 
 .card {
    background-color: linear-gradient(90.28deg, #0F294A 0%, #652D90 100%);
-   max-width: 400px;
+   max-width: 600px;
    margin: auto;
    padding: 20px;
+   border-radius: 15px;
    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
    text-align: center;
 }
@@ -598,4 +615,14 @@ footer img {
 
 .hidden {
    display:none;
+}
+
+.add-project {
+   max-width: calc(90% - 2em);
+   background-color: #a7a7a7;
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   font-size: 100px;
+   border-radius: 15px;
 }

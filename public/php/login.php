@@ -14,12 +14,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$result = mysqli_query($conn, $query);
 
 		if(mysqli_num_rows($result) == 1) {
+			$mem_id = $result->fetch_assoc();
+			$mem_id = $mem_id['member_id'];
+			$query = "SELECT g.group FROM user_group AS g JOIN members AS m ON g.number = m.user_group WHERE m.member_id = '$mem_id'";
+			$result = mysqli_query($conn, $query);
+
+			$user_group = $result->fetch_assoc();
+			$user_group = $user_group['group'];
+
 			$_SESSION['logged_in'] = true;
+			$_SESSION['user_group'] = $user_group;
+
 			header('Location: ../html/dashboard.html');
 			exit();
 		}
 		else {
-			echo '<script>alert("Invalid email or password.");</script>';
+			echo '<script>alert("Invalid email or password.");window.location.href="../html/login.html"</script>';
 		}
 	}
 }
