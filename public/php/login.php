@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$user_group = $user_group['group'];
 
 			$_SESSION['logged_in'] = true;
+			$_SESSION['member_id'] = $mem_id;
 			$_SESSION['user_group'] = $user_group;
 
 			header('Location: ../html/dashboard.html');

@@ -18,6 +18,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../js/check_login.js"></script>
 		<script src="../js/load_dash.js"/></script>
+		<script src="../js/load_project_instance.js"></script>
 		<script src="https://kit.fontawesome.com/d4b297eac7.js" crossorigin="anonymous"></script>
 	</head>
 
@@ -31,6 +32,7 @@
 
 		<!-- project section -->
 		<section class="projects-block">
+			<div id="projects"></div>
 			<div class="projects">
 				<div class="projects-block-title"> Project </div>
 				<div class="projects-block-inner">
@@ -39,6 +41,20 @@
 							<i class="fa-solid fa-plus"></i>
 						</div>
 					</a>
+				</div>
+			</div>
+			<div class="projects">
+				<div class="projects-block-title"> Project </div>
+				<div style="text-align:center" class="projects-block-inner">
+					<p>Video Annotation</p>
+					<p>Budget: R10000</p>
+					<p>Cost: R500</p>
+					<p>Budget Remaining: R9500</p>
+					<form name="project" id="formToSubmit" method="post">
+						<button id="triggerFormSubmit" type="submit">
+							<i class="fa-solid fa-pen-to-square"></i>
+						</button>
+					</form>
 				</div>
 			</div>
 		</section>

@@ -7,6 +7,7 @@ $(document).ready(function() {
 			var tableBody = $('#load_admin');
 			response.forEach(function(row) {
 				var newRow = $('<tr>');
+				newRow.append($('<td>').text(row.project_name));
 				newRow.append($('<td>').text(row.member_id));
 				newRow.append($('<td>').text(row.serv_id));
 				newRow.append($('<td>').text(row.budget));
