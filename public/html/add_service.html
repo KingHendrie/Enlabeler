@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- mobile metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- site meta -->
+		<title>Enlabeler</title>
+		<meta name="author" content="Jan Abraham Visagie">
+		<!-- style css -->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<!-- header_footer -->
+		<link rel="stylesheet" href="../css/head_footer.css">
+		<!-- load scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/check_admin.js"></script>
+		<script src="../js/check_login.js"></script>
+		<script src="../js/load_dash.js"/></script>
+		<script src="https://kit.fontawesome.com/d4b297eac7.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<!-- header section -->
+		<header>
+			<div class="navbar-container">
+				<!-- load navbar -->
+			</div>
+		</header>
+
+		<!-- add admin section -->
+		<section id="login">
+			<div class="container">
+				<form id="addAdmin" action="../php/add_service.php" method="post">
+					<div class="card">
+						<h1>Add Admin</h1>
+						<div class="login-details">
+
+							<label for="service">Service:</label>
+							<input class="clear" type="text" id="service" name="service" required>
+
+							<label for="description">Description:</label>
+							<input class="clear" type="text" id="description" name="description" required>
+
+							<label for="price_p_unit">Price/Unit:</label>
+							<input class="clear" type="number" id="price_p_unit" name="price_p_unit" required>
+
+							<label for="unit">Unit:</label>
+							<input class="clear" type="number" id="unit" name="unit" required>
+							<br>
+							<br>
+							<input type="submit" value="Submit">
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+	</body>
+
+	<footer>
+		<div class="footer-container">
+			<!-- load footer -->
+		</div>
+	</footer>
+</html>
