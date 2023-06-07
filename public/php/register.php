@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$errors[] = "Please enter your password.";
 	}
 	if (empty($confirm_password) || $confirm_password != $password) {
-		$errors[] = "Please confirm your password.";
+		$errors[] = "Password does not match.";
 	}
 
 	$query = "SELECT * FROM members WHERE email='$email'";

@@ -19,6 +19,7 @@
 		<script src="../js/load.js"/></script>
 		<script src="../js/password.js"></script>
 		<script src="../js/reset_fields.js"></script>
+		<script src="../js/check_password.js"></script>
 	</head>
 
 	<body>
@@ -32,7 +33,7 @@
 		<!-- register section -->
 		<section id="login">
 			<div class="container">
-				<form action="../php/register.php" method="post">
+				<form id="passwordForm" action="../php/register.php" method="post">
 					<div class="card">
 						<h1>Register</h1>
 						<div class="login-details">
@@ -48,7 +49,7 @@
 
 							<div class="show-hide">
 								<label for="password">Password:</label>
-								<input class="password clear" type="password" id="password" name="password" required>
+								<input id="passwordInput" class="password clear" type="password" id="password" name="password" required>
 
 								<label for="confirm_password">Confirm Password:</label>
 								<input class="confirm-password clear" type="password" id="confirm_password" name="confirm_password" required>
