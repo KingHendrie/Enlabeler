@@ -13,7 +13,7 @@
 			echo "Succesfully deleted";
 		} else {
 			$error_msg = implode("<br>", $errors);
-			echo '<script>alert("'.$error_msg.'");window.location.href="../html/view_admins.html";</script>';
+			echo '<script>alert("'.$error_msg.'");window.location.href="../html/view_users.html";</script>';
 		}
    }
 ?>
