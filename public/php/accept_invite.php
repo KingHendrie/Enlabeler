@@ -1,4 +1,5 @@
 <?php
+session_star();
 require_once 'db_connection.php';
 require_once 'send_email.php';
 
@@ -42,12 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$mail->SetFrom($email, 'Enlabeler Info');
 			$mail->addAddress($email, $email);
 
-			$mail->Subject = 'Reset Password Successfully';
-			$mail->Body = "Password Reset was successful";
+			$mail->Subject = 'Invite Accepted';
+			$mail->Body = "Welcome to the Enlabeler Team!";
 
 			$mail->send();
 
-			echo "Password Reset Successfully";
+			echo "Invite Accepted";
 			
 			header("Location: ../html/login.html");
 			exit();

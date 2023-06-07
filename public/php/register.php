@@ -1,8 +1,6 @@
 <?php
 require_once 'db_connection.php';
-require '../vendor/autoload.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+require_once 'send_email.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$first_name = trim($_POST["first_name"]);
@@ -45,26 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$result = mysqli_query($conn, $query);
 
 		if ($result) {
-
-			$mail = new PHPMailer(true);
-
-			$mail->isSMTP();
-			$mail->SMTPAuth = true;
-
-			$mail->Host = 'smtp.gmail.com';
-			$mail->SMTPOptions = array(
-				'ssl' => array(
-					'verify_peer' => false,
-					'verify_peer_name' => false,
-					'allow_self_signed' => true
-				)
-			);
-			$mail->SMTPSecure = 'ssl';
-			$mail->Port = 465;
-
-			$mail->Username = 'info.enlabeler@gmail.com';
-			$mail->Password = 'tbomhbilcirufezx';
-
 			$mail->SetFrom($email, 'Enlabeler Info');
 			$mail->addAddress($email, $first_name);
 
@@ -72,6 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$mail->Body = "Thank you for registering with Enlabeler, $first_name.";
 
 			$mail->send();
+
+			$_SESSION['logged_in'] = true;
+			$_SESSION['user_group'] = $user_group;
 
 			header('Location: ../html/dashboard.html');
 			exit();

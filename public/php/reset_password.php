@@ -1,9 +1,7 @@
 <?php
 session_start();
 require_once 'db_connection.php';
-require '../vendor/autoload.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+require_once 'send_email.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = trim($_POST["email"]);
@@ -24,25 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$row = $mem_id->fetch_assoc();
 
 		$mem_id = $row['member_id'];
-
-		$mail = new PHPMailer(true);
-
-		$mail->isSMTP();
-		$mail->SMTPAuth = true;
-
-		$mail->Host = 'smtp.gmail.com';
-		$mail->SMTPOptions = array(
-			'ssl' => array(
-				'verify_peer' => false,
-				'verify_peer_name' => false,
-				'allow_self_signed' => true
-			)
-		);
-		$mail->SMTPSecure = 'ssl';
-		$mail->Port = 465;
-
-		$mail->Username = 'info.enlabeler@gmail.com';
-		$mail->Password = 'tbomhbilcirufezx';
 
 		$mail->SetFrom($email, 'Enlabeler Info');
 		$mail->addAddress($email, $email);
