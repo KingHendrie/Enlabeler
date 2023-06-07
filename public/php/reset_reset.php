@@ -2,7 +2,7 @@
 require_once 'db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$email = trim($_POST["email"]);
+	$email = strtolower(trim($_POST["email"]));
 	$password = trim($_POST["password"]);
 	$confirm_password = trim($_POST["confirm_password"]);
 	$mem_id = trim($_POST["mem_id"]);

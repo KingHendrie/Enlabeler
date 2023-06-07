@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$.ajax({
-	  	url: "check_login.php",
+	  	url: "../php/check_login.php",
 	  	type: "GET",
 	  	dataType: "json",
 	  	success: function(response) {
