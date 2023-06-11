@@ -1,7 +1,7 @@
 <?php
 	require_once 'db_connection.php';
 
-   $query = "SELECT pro_id, project_name, member_id, serv_id, budget, budget_remaining, billing_cur, pro_cost FROM projects";
+   $query = "SELECT * FROM projects";
    $result = mysqli_query($conn, $query);
 
    $rows = [];

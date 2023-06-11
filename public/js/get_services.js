@@ -8,9 +8,11 @@ $(document).ready(function() {
 	
 			response.forEach(function(service) {
 				var option = $('<option>', {
-				value: service.serv_id,
+				id: service.serv_id,
+				value: service.price_p_unit,
 				text: service.service,
-				data: service.price_p_unit
+				name: service.unit,
+				description: service.description
 				});
 	
 				serviceDropdown.append(option);

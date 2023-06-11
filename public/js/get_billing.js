@@ -9,7 +9,8 @@ $(document).ready(function() {
 			response.forEach(function(currency) {
 				var option = $('<option>', {
 				value: currency.rate,
-				text: currency.currency
+				text: currency.currency,
+				name: currency.currency
 				});
 	
 				billingCurrencyDropdown.append(option);

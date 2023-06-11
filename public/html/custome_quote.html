@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- mobile metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- site meta -->
+		<title>Enlabeler</title>
+		<meta name="author" content="Jan Abraham Visagie">
+		<!-- style css -->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<!-- header_footer -->
+		<link rel="stylesheet" href="../css/head_footer.css">
+		<!-- load scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/load.js"/></script>
+		<script src="../js/get_services.js"></script>
+		<script src="../js/get_billing.js"></script>
+		<script src="../js/update.js"></script>
+	</head>
+
+	<body>
+		<!-- header section -->
+		<header>
+			<div class="navbar-container">
+				<!-- load navbar -->
+			</div>
+		</header>
+
+		<!-- quote project section -->
+		<section id="login">
+			<div class="container">
+				<div class="card">
+					<h1>Quote</h1>
+					<h1>Calculator</h1>
+					<div class="login-details">
+
+						<label for="budget">Budget:</label>
+						<input class="clear" type="number" id="budget" name="budget" value="0" required>
+
+						<label for="serviceDropdown">Service:</label>
+						<select style="margin-bottom:2px" name="serviceDropdown" id="serviceDropdown" class="service-type" value="-Please Select-">
+							<option id="null" value="0" name="0" description="Select a service">-Please Select-</option>
+						</select>
+
+						<div class="info">
+							<p>Description:</p>
+							<p style="margin-top:2px" id="serviceDescription">Detect and label elements in images.</p>
+						</div>
+
+						<label for="billingDropdown">Billing Currency:</label>
+						<select name="billingDropdown" id="billingDropdown" class="billing-currency">
+							<option id="null" value="1" name="R">-Please Select-</option>
+						</select>
+
+						<label for="units">Estimated Units:</label>
+						<input class="clear" type="number" step="500" id="units" name="units" value="0" required>
+						<p style="font-size:30px" id="cost">Cost: R0</p>
+						<p style="font-size:30px" id="budgetRemaining">Budget Remaining: R0</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+
+	<footer>
+		<div class="footer-container">
+			<!-- load footer -->
+		</div>
+	</footer>
+</html>

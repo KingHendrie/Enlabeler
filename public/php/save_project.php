@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$pro_cost = trim($_POST["idcost"]);
 	$budget_remaining = trim($_POST["idbudgetRemaining"]);
 	$units = trim($_POST["idunits"]);
+	$pro_id = trim($_POST["idprojectid"]);
 
 	$errors = array();
 	if (empty($project_name)) {
@@ -29,12 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	if (count($errors) == 0) {
-
-		$pro_id = substr($service_id,0,3).''.rand(1000000,9999999);
 		$mem_id = $_SESSION['member_id'];
 
-		$query = "INSERT INTO projects (pro_id, project_name, member_id, serv_id, budget, billing_cur, pro_cost, budget_remaining, units)
-						VALUES ('$pro_id', '$project_name', '$mem_id', '$service_id', '$budget', '$billing_cur', '$pro_cost', '$budget_remaining', '$units')";
+		$query = "UPDATE projects 
+					 SET project_name = '$project_name', 
+					 	  member_id = '$mem_id', 
+						  serv_id = '$service_id', 
+						  budget = '$budget', 
+						  billing_cur = '$billing_cur', 
+						  pro_cost = '$pro_cost', 
+						  budget_remaining = '$budget_remaining', 
+						  units = '$units' 
+					 WHERE pro_id = '$pro_id'";
 		$result = mysqli_query($conn, $query);
 
 		if ($result) {
@@ -48,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 	else {
 		$error_msg = implode("<br>", $errors);
-		echo '<script>alert("'.$error_msg.'");window.location.href="../html/new_project.html";</script>';
+		echo '<script>alert("'.$error_msg.'");window.location.href="../html/edit_project.html?projectid='.$pro_id.'";</script>';
 	}
 
 }

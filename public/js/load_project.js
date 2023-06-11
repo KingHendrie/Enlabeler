@@ -11,9 +11,10 @@ $(document).ready(function() {
 				newRow.append($('<td>').text(row.member_id));
 				newRow.append($('<td>').text(row.serv_id));
 				newRow.append($('<td>').text(row.budget));
-				newRow.append($('<td>').text(row.budget_remaining));
 				newRow.append($('<td>').text(row.billing_cur));
 				newRow.append($('<td>').text(row.pro_cost));
+				newRow.append($('<td>').text(row.budget_remaining));
+				newRow.append($('<td>').text(row.units));
 				newRow.append($('<td>').html(
 					`<form name="${row.pro_id}" id="formToSubmit" method="post">
 						<button id="triggerFormSubmit" type="submit" style="border:none; background:none; padding:0px;">

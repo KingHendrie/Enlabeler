@@ -20,6 +20,7 @@
 		<script src="../js/load_dash.js"/></script>
 		<script src="../js/get_services.js"></script>
 		<script src="../js/get_billing.js"></script>
+		<script src="../js/update.js"></script>
 	</head>
 
 	<body>
@@ -43,18 +44,33 @@
 							<input class="clear" type="text" id="project_name" name="project_name" required>
 
 							<label for="budget">Budget:</label>
-							<input id="inputbudget" class="clear" type="number" step="500" id="budget" name="budget" value="500" required>
+							<input class="clear" type="number" id="budget" name="budget" value="0" required>
 
 							<label for="serviceDropdown">Service:</label>
-							<select name="serviceDropdown" id="serviceDropdown" class="service-type"></select>
+							<select style="margin-bottom:2px" name="serviceDropdown" id="serviceDropdown" class="service-type" value="-Please Select-">
+								<option id="null" value="0" name="0" description="Select a service">-Please Select-</option>
+							</select>
+
+							<div class="info">
+								<p>Description:</p>
+								<p style="margin-top:2px" id="serviceDescription">Detect and label elements in images.</p>
+							</div>
 
 							<label for="billingDropdown">Billing Currency:</label>
-							<select name="billingDropdown" id="billingDropdown" class="billing-currency"></select>
+							<select name="billingDropdown" id="billingDropdown" class="billing-currency">
+								<option id="null" value="1" name="R">-Please Select-</option>
+							</select>
 
 							<label for="units">Estimated Units:</label>
-							<input class="clear" type="number" step="500" id="units" name="units" value="500" required>
+							<input class="clear" type="number" step="500" id="units" name="units" value="0" required>
+							<p style="font-size:30px" id="cost">Cost: R0</p>
+							<p style="font-size:30px" id="budgetRemaining">Budget Remaining: R0</p>
 							<br>
-							<br>
+							<input id="idserviceid" for="idserviceid" class="hidden" type="text" name="idserviceid">
+							<input id="idbillingDropdown" for="idbillingDropdown" class="hidden" type="text" name="idbillingDropdown">
+							<input id="idunits" for="idunits" class="hidden" type="text" name="idunits">
+							<input id="idcost" for="idcost" class="hidden" type="text" name="idcost">
+							<input id="idbudgetRemaining" for="idbudgetRemaining" class="hidden" type="text" name="idbudgetRemaining">
 							<input type="submit" value="Submit">
 						</div>
 					</div>
