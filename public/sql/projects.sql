@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2023 at 11:31 PM
+-- Generation Time: Jun 11, 2023 at 02:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -34,8 +34,18 @@ CREATE TABLE `projects` (
   `serv_id` varchar(10) NOT NULL,
   `budget` float NOT NULL,
   `billing_cur` varchar(1) NOT NULL,
+  `pro_cost` float NOT NULL,
+  `budget_remaining` float NOT NULL,
   `units` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`pro_id`, `project_name`, `member_id`, `serv_id`, `budget`, `billing_cur`, `pro_cost`, `budget_remaining`, `units`) VALUES
+('ima3148558', 'Test', 'janvis1376', 'ima4998209', 100000, '$', 13158, 86842, 500),
+('vid8312177', 'Test2', 'janvis1376', 'vid3406122', 10000, 'R', 250000, -240000, 500);
 
 --
 -- Indexes for dumped tables
