@@ -12,6 +12,7 @@
 
 .navbar.show {
    left: 0 !important;
+   z-index: 1;
 }
 
 .hide-scroll {
